@@ -5,7 +5,7 @@ import com.example.demo.entity.Medicine;
 public class MedicineServiceImpl implements MedicineServices {
 
 	@Override
-	public Medicine Add() {
+	public String Add(Medicine medi) {
 		// TODO Auto-generated method stub
 		return null;
 	}
