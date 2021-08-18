@@ -17,4 +17,14 @@ public class MedicineController {
 		return "services";
 	}
 	
+	@RequestMapping("/about")
+	public String showAboutUs() {
+		return "about";
+	}
+	
+	@RequestMapping("/contact")
+	public String showContact() {
+		return "contact";
+	}
+	
 }
