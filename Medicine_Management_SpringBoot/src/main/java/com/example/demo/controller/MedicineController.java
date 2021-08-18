@@ -27,4 +27,9 @@ public class MedicineController {
 		return "contact";
 	}
 	
+	@RequestMapping("/addpage")
+	public String addPage() {
+		return "addpage";
+	}
+	
 }
