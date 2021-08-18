@@ -4,7 +4,7 @@ import com.example.demo.entity.Medicine;
 
 public interface MedicineServices {
 	
-	public String Add(Medicine medi);
+	public String add(Medicine medi);
 	public String Search();
 	public String Delete();
 

@@ -4,8 +4,8 @@ import com.example.demo.entity.Medicine;
 
 public interface MedicineDao {
 	
-	public Medicine mAdd();
-	public String mDelete();
-	public String mSearch();
+	public String mAdd(Medicine medi);
+	public String mDelete(int mid);
+	public Medicine mSearch(int mid);
 
 }

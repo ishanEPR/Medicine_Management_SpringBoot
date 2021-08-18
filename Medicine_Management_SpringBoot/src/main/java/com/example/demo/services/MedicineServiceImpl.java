@@ -1,12 +1,22 @@
 package com.example.demo.services;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.demo.Dao.MedicineDao;
 import com.example.demo.entity.Medicine;
 
+@Service
 public class MedicineServiceImpl implements MedicineServices {
 
+	@Autowired
+	MedicineDao mediDao;
+	
+	
 	@Override
-	public String Add(Medicine medi) {
-		// TODO Auto-generated method stub
+	public String add(Medicine medi) {
+		
+		String status=mediDao.mAdd(medi);
 		return null;
 	}
 

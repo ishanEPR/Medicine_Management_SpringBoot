@@ -50,7 +50,7 @@ public class MedicineController {
 		medi.setmCount(Integer.parseInt(count));
 		medi.setmDescription(des);
 		
-		String status=medicineServices.Add(medi);
+		String status=medicineServices.add(medi);
 		return status;
 	}
 	
