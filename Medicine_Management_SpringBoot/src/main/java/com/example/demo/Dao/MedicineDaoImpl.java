@@ -16,9 +16,29 @@ public class MedicineDaoImpl implements MedicineDao {
 
 	@Override
 	public String mAdd(Medicine medi) {
-		String status="";
+		
 		Medicine midi=mSearch(medi.getmID());
-		return status;
+		
+		if(midi==null) {
+			int rowCount=jdbcTemplate.update("insert into MedicineRecord values('"+medi.getmID()+"','"+medi.getmName()+"','"+medi.getmCount()+"','"+medi.getmDescription()+"')");
+			if(rowCount==1)
+			{
+				return "success";
+			}else {
+				return "existed";
+			}
+			
+			
+		}else {
+			
+			return "existed";
+			
+		}
+		
+		
+		
+		
+		
 	}
 
 	@Override
@@ -46,11 +66,13 @@ public class MedicineDaoImpl implements MedicineDao {
 		if(medList.isEmpty()==true) {
 			
 			md=null;
+			
 		}
 		else {
+			
 			return md=medList.get(0);
 		}
-		
+		return md;
 	
 	}
 
