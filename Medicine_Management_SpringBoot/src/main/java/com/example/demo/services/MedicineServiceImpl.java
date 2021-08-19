@@ -17,7 +17,7 @@ public class MedicineServiceImpl implements MedicineServices {
 	public String add(Medicine medi) {
 		
 		String status=mediDao.mAdd(medi);
-		return null;
+		return status;
 	}
 
 	@Override
